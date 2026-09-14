@@ -125,8 +125,7 @@
 .home__socials {
   display: flex;
   align-items: center;
-  gap: 6px;
-  margin-left: 4px;
+  gap: 14px;
 }
 
 .home__social-link {
@@ -149,4 +148,17 @@
 
 .home__social-link:active {
   transform: scale(0.97);
+}
+
+@media (max-width: 640px) {
+  .home__actions {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .home__socials {
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+  }
 }
