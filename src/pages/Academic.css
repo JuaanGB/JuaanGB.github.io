@@ -1,0 +1,97 @@
+.academic-block {
+  margin-bottom: 40px;
+}
+
+.academic-block__title {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.academic-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.academic-table thead th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.academic-table thead th:last-child,
+.academic-table td:last-child {
+  width: 1%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.academic-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.academic-table tbody tr:not(:last-child) td {
+  border-bottom: 1px solid var(--border);
+}
+
+.academic-table tbody tr:hover {
+  background: var(--surface-hover);
+}
+
+.academic-table td {
+  padding: 13px 20px;
+  font-size: 0.94rem;
+  vertical-align: middle;
+  word-break: break-word;
+}
+
+.academic-table__grade {
+  font-family: var(--font-mono);
+}
+
+.grade--high {
+  color: var(--accent);
+}
+
+.grade--mid {
+  color: var(--text-primary);
+}
+
+.grade--low {
+  color: var(--text-secondary);
+}
+
+.honors-tag {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--accent);
+  border: 1px solid rgba(94, 230, 208, 0.4);
+  background: var(--accent-soft);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+@media (max-width: 480px) {
+  .academic-table th,
+  .academic-table td {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .honors-tag {
+    font-size: 0.9rem;
+    padding: 2px 6px;
+    margin-right: 8px;
+  }
+}

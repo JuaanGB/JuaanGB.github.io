@@ -1,0 +1,114 @@
+:root {
+  /* Superficies */
+  --bg: #0a0e14;
+  --bg-elevated: #0d131c;
+  --surface: #111826;
+  --surface-hover: #151f30;
+  --border: #212c3d;
+  --border-strong: #2c3a50;
+
+  /* Texto */
+  --text-primary: #e4e9f2;
+  --text-secondary: #8b95a8;
+  --text-tertiary: #5c6678;
+
+  /* Acentos */
+  --accent: #5ee6d0;
+  --accent-strong: #7ffbe6;
+  --accent-soft: rgba(94, 230, 208, 0.12);
+  --accent-2: #c792ea;
+  --accent-2-soft: rgba(199, 146, 234, 0.12);
+
+  /* Tipografía */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Layout */
+  --content-max: 760px;
+  --page-max: 1120px;
+  --radius: 10px;
+  --radius-sm: 6px;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  background-image: linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 64px 64px;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* La cuadrícula de fondo debe ser casi imperceptible: sólo un gesto de "planilla de editor" */
+body::before {
+  content: '';
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
