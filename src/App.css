@@ -87,13 +87,13 @@
 
 .btn--ghost {
   background: transparent;
-  color: var(--text-primary);
-  border-color: var(--border-strong);
+  color: var(--accent-strong);
+  border-color: var(--accent);
 }
 
 .btn--ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 16px rgba(94, 230, 208, 0.35);
 }
 
 .badge {

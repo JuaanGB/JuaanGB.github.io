@@ -135,15 +135,15 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-sm);
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--accent);
   background: transparent;
-  color: var(--text-secondary);
-  transition: color 0.18s ease, border-color 0.18s ease;
+  color: var(--accent-strong);
+  transition: color 0.18s ease, background-color 0.18s ease, box-shadow 0.2s ease;
 }
 
 .home__social-link:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  background: var(--accent-soft);
+  box-shadow: 0 0 16px rgba(94, 230, 208, 0.35);
 }
 
 .home__social-link:active {
