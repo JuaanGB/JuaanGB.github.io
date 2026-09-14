@@ -13,6 +13,8 @@
 }
 
 .app-footer {
+  background: rgba(10, 14, 20, 0.75);
+  backdrop-filter: blur(10px);
   border-top: 1px solid var(--border);
   padding: 24px 32px;
   text-align: center;
@@ -21,7 +23,7 @@
 .app-footer p {
   font-family: var(--font-mono);
   font-size: 0.78rem;
-  color: var(--text-tertiary);
+  color: var(--accent);
 }
 
 @media (max-width: 640px) {
