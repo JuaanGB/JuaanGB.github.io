@@ -8,11 +8,19 @@ interface Props {
 
 export default function ProjectCard({ project }: Props) {
   const [activeImage, setActiveImage] = useState(0)
+  const [loaded, setLoaded] = useState<Record<number, boolean>>({})
 
   return (
     <article className={'project-card' + (project.featured ? ' project-card--featured' : '')}>
       <div className="project-card__media">
-        <img src={project.images[activeImage]} alt={`Captura de ${project.title}`} />
+        <img
+          src={project.images[activeImage]}
+          alt={`Captura de ${project.title}`}
+          loading="lazy"
+          decoding="async"
+          className={'project-card__img' + (loaded[activeImage] ? ' project-card__img--loaded' : '')}
+          onLoad={() => setLoaded((prev) => ({ ...prev, [activeImage]: true }))}
+        />
         {project.images.length > 1 && (
           <div className="project-card__dots">
             {project.images.map((_, i) => (

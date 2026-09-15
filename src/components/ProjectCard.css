@@ -174,3 +174,12 @@
   border-radius: 50%;
   background: var(--accent);
 }
+
+.project-card__img {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.project-card__img--loaded {
+  opacity: 1;
+}

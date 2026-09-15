@@ -8,8 +8,8 @@ export const projects: Project[] = [
     title: 'Modular-ViT',
     year: 2026,
     images: [
-      '/images/modular-vit.png',
-      '/images/modular-vit-2.png',
+      '/images/modular-vit.webp',
+      '/images/modular-vit-2.webp',
     ],
     technologies: ['Python', 'PyTorch', 'Vision Transformers', 'NumPy', 'Pandas', 'TKinter'],
     whatItIs:
@@ -30,8 +30,8 @@ export const projects: Project[] = [
     title: 'Videojuego de Guerra con Bandos',
     year: 2026,
     images: [
-      '/images/iadj-1.png',
-      '/images/iadj-2.png',
+      '/images/iadj-1.webp',
+      '/images/iadj-2.webp',
     ],
     technologies: ['Unity', 'C#', 'Modelado 3D', 'Steerings', 'Árboles de comportamiento', 'Trabajo en equipo'],
     whatItIs:
@@ -50,9 +50,9 @@ export const projects: Project[] = [
     title: 'Visión Artificial',
     year: 2026,
     images: [
-      '/images/vision-artificial-1.png',
-      '/images/vision-artificial-2.png',
-      '/images/vision-artificial-3.png',
+      '/images/vision-artificial-1.webp',
+      '/images/vision-artificial-2.webp',
+      '/images/vision-artificial-3.webp',
     ],
     technologies: ['Python', 'Scikit-learn', 'CNN', 'YOLO', 'Telegram Bot', 'Filtros morfológicos', 'MediaPipe'],
     whatItIs:
@@ -69,7 +69,7 @@ export const projects: Project[] = [
     id: 'aprendizaje-computacional',
     title: 'Predicción de Aprobación de Crédito',
     year: 2025,
-    images: ['/images/aprendizaje-computacional.png'],
+    images: ['/images/aprendizaje-computacional.webp'],
     technologies: ['RStudio', 'Análisis multivariable', 'Machine Learning', 'Random Forest', 'Gradient Boosting', 'Redes Neuronales'],
     whatItIs:
       'Análisis de datos y modelado predictivo en R aplicado a la aprobación de créditos, con comparación y optimización de varios modelos de clasificación.',
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     id: 'futbolistos',
     title: 'Futbolistos',
     year: 2025,
-    images: ['/images/futbolistos.png'],
+    images: ['/images/futbolistos.webp'],
     technologies: ['Java', 'Swing', 'Hibernate', 'Maven', 'Eclipse IDE'],
     repo: 'https://github.com/JuaanGB/Futbolistos',
     whatItIs:
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     id: 'appchat',
     title: 'AppChat',
     year: 2024,
-    images: ['/images/appchat.png'],
+    images: ['/images/appchat.webp'],
     technologies: ['Java', 'Swing', 'Base de Datos h2', 'Window Builder', 'Eclipse IDE', 'Patrones de diseño', 'Trabajo en equipo'],
     whatItIs:
       'Clon de WhatsApp desarrollado con Java Swing.',
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     id: 'smartway',
     title: 'SmartWay Proyectos',
     year: 2025,
-    images: ['/images/smartway-1.png'],
+    images: ['/images/smartway-1.webp'],
     technologies: ['Vue.js', 'HTML', 'CSS', 'JavaScript', 'Pinia', 'Docker', 'Tailwind CSS', 'ASP.NET', 'Entity Framework', 'JWT Auth'],
     repo: 'https://github.com/JuaanGB/SmartWay-Final',
     whatItIs:
@@ -132,7 +132,7 @@ export const projects: Project[] = [
     id: 'horarigo',
     title: 'HorariGo',
     year: 2025,
-    images: ['/images/horarigo.png'],
+    images: ['/images/horarigo.webp'],
     technologies: ['Vue.js', 'HTML', 'CSS', 'JavaScript', 'Pinia', 'Tailwind CSS'],
     repo: 'https://github.com/JuaanGB/HorariGo',
     whatItIs:
@@ -149,11 +149,11 @@ export const projects: Project[] = [
     title: 'EcoPath',
     year: 2026,
     images: [
-      '/images/ecopath-1.png',
-      '/images/ecopath-2.png',
-      '/images/ecopath-3.png',
-      '/images/ecopath-4.png',
-      '/images/ecopath-5.png',
+      '/images/ecopath-1.webp',
+      '/images/ecopath-2.webp',
+      '/images/ecopath-3.webp',
+      '/images/ecopath-4.webp',
+      '/images/ecopath-5.webp',
     ],
     technologies: ['Figma', 'Trabajo en equipo', 'Normativa medioambiental', 'SaaS', 'Investigación de mercado'],
     repo: 'https://www.figma.com/make/qoJabd0eNgSUdHOI3gXQKi/Carbon-Footprint-Reduction-Website?p=f&t=839sgQsk1gD1iXgu-0&preview-route=%2Finformes',
