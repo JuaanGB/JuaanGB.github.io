@@ -1,5 +1,3 @@
-import { experience } from "../data/experience";
-
 export const strings = {
   es: {
     nav: { home: 'Sobre mí', projects: 'Proyectos', academic: 'Expediente académico', experience: 'Experiencia' },
