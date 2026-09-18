@@ -146,3 +146,44 @@
     display: flex;
   }
 }
+
+.navbar__lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.18s ease, transform 0.15s ease;
+  line-height: 0;
+}
+
+.navbar__lang svg {
+  display: block;
+  border-radius: 2px;
+}
+
+.navbar__lang:hover {
+  transform: scale(1.1);
+}
+
+.navbar__mobile-actions {
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__lang--mobile {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .navbar__mobile-actions {
+    display: flex;
+  }
+  .navbar__lang--mobile {
+    display: flex;
+  }
+}

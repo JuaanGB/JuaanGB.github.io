@@ -1,4 +1,6 @@
 import { academicRecord } from '../data/academic'
+import { useLanguage } from '../context/LanguageContext'
+import { strings } from '../i18n/strings'
 import './Academic.css'
 
 function gradeClass(grade: number): string {
@@ -8,6 +10,9 @@ function gradeClass(grade: number): string {
 }
 
 export default function Academic() {
+  const { lang } = useLanguage()
+  const t = strings[lang]
+
   const average = (
     academicRecord.reduce((sum, entry) => sum + entry.grade, 0) / academicRecord.length
   ).toFixed(2)
@@ -21,28 +26,32 @@ export default function Academic() {
     <div>
       <div className="page-header">
         <p className="page-eyebrow">// grades --all</p>
-        <h1 className="page-title">Grado en Ingeniería Informática</h1>
-        <p className="page-subtitle">
-          Mención en Computación · Universidad de Murcia · 2022-2026 · Nota media {average}/10
-        </p>
+        <h1 className="page-title">{t.academic.pageTitle}</h1>
+          <p className="page-subtitle">
+            {t.academic.mention} | {t.academic.university} 2022-2026 | {t.academic.averageLabel} {average}/10
+          </p>
       </div>
 
       {Object.entries(byCourse).map(([course, entries]) => (
         <div key={course} className="academic-block">
-          <h2 className="academic-block__title">Curso {course}</h2>
+          <h2 className="academic-block__title">{t.academic.course} {course}</h2>
           <table className="academic-table">
             <thead>
               <tr>
-                <th>Asignatura</th>
-                <th>Nota</th>
+                <th>{t.academic.subject}</th>
+                <th>{t.academic.grade}</th>
               </tr>
             </thead>
             <tbody>
               {entries.map((entry) => (
-                <tr key={entry.subject}>
-                  <td>{entry.subject}</td>
+                <tr key={`${entry.subject.es}`}>
+                  <td>{entry.subject[lang]}</td>
                   <td className={`academic-table__grade ${gradeClass(entry.grade)}`}>
-                    {entry.honors && <span className="honors-tag">MH</span>}
+                    {entry.honors && (
+                      <span className="honors-tag" title='MH'>
+                        MH
+                      </span>
+                    )}
                     {entry.grade.toFixed(1)}
                   </td>
                 </tr>

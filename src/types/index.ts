@@ -1,19 +1,18 @@
 export interface Project {
   id: string
-  title: string
+  title: { es: string; en: string }
   year: number
   images: string[]
   technologies: string[]
-  whatItIs: string
-  challenges: string[]
-  metrics: string[]
-  link?: string
+  whatItIs: { es: string; en: string }
+  challenges: { es: string; en: string }[]
+  metrics: { es: string; en: string }[]
   repo?: string
   featured?: boolean
 }
 
 export interface AcademicEntry {
-  subject: string
+  subject: { es: string; en: string }
   course: number
   grade: number
   honors?: boolean
@@ -21,9 +20,9 @@ export interface AcademicEntry {
 
 export interface ExperienceEntry {
   id: string
-  company: string
-  role: string
-  startDate: string
-  endDate: string
-  description: string[]
+  company: { es: string; en: string }
+  role: { es: string; en: string }
+  startDate: { es: string; en: string }
+  endDate: { es: string; en: string }
+  description: { es: string; en: string }[]
 }

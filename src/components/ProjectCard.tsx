@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import type { Project } from '../types'
 import './ProjectCard.css'
+import { useLanguage } from '../context/LanguageContext'
+import { strings } from '../i18n/strings'
 
 interface Props {
   project: Project
@@ -9,6 +11,8 @@ interface Props {
 export default function ProjectCard({ project }: Props) {
   const [activeImage, setActiveImage] = useState(0)
   const [loaded, setLoaded] = useState<Record<number, boolean>>({})
+  const { lang } = useLanguage()
+  const t = strings[lang]
 
   return (
     <article className={'project-card' + (project.featured ? ' project-card--featured' : '')}>
@@ -37,7 +41,7 @@ export default function ProjectCard({ project }: Props) {
 
       <div className="project-card__body">
         <div className="project-card__heading">
-          <h3 className="project-card__title">{project.title}</h3>
+          <h3 className="project-card__title">{project.title[lang]}</h3>
           <span className="project-card__year">{project.year}</span>
         </div>
 
@@ -51,41 +55,36 @@ export default function ProjectCard({ project }: Props) {
 
         <dl className="project-card__fields">
           <div className="project-card__field">
-            <dt>Qué es</dt>
-            <dd>{project.whatItIs}</dd>
+            <dt>{t.projects.whatItIs}</dt>
+            <dd>{project.whatItIs[lang]}</dd>
           </div>
           <div className="project-card__field">
-            <dt>Retos enfrentados</dt>
+            <dt>{t.projects.challenges}</dt>
             <dd>
               <ul className="project-card__list">
                 {project.challenges.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <li key={i}>{item[lang]}</li>
                 ))}
               </ul>
             </dd>
           </div>
           <div className="project-card__field">
-            <dt>Métricas de buen rendimiento</dt>
+            <dt>{t.projects.metrics}</dt>
             <dd>
               <ul className="project-card__list">
                 {project.metrics.map((item, i) => (
-                  <li key={i}>{item}</li>
+                  <li key={i}>{item[lang]}</li>
                 ))}
               </ul>
             </dd>
           </div>
         </dl>
 
-        {(project.link || project.repo) && (
+        {(project.repo) && (
           <div className="project-card__links">
             {project.repo && (
               <a href={project.repo} target="_blank" rel="noreferrer" className="project-card__link">
-                Ver código
-              </a>
-            )}
-            {project.link && (
-              <a href={project.link} target="_blank" rel="noreferrer" className="project-card__link">
-                Ver demo
+                {t.projects.viewCode}
               </a>
             )}
           </div>

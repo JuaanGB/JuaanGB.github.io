@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom'
 import './Home.css'
+import { useLanguage } from '../context/LanguageContext'
+import { strings } from '../i18n/strings.ts'
+
 
 export default function Home() {
+  const { lang } = useLanguage()
+  const t = strings[lang]
+
   return (
     <div className="home">
       <section className="home__hero">
@@ -12,26 +18,23 @@ export default function Home() {
             González Ballesta
           </h1>
           <p className="home__role">
-            Ingeniero Informático (Univ. de Murcia) enfocado en IA, Visión por Computador y desarrollo de software.
+            {t.home.role}
           </p>
           <p className="home__bio">
-            Graduado en Ingeniería Informática con mención en Computación, con un expediente
-            de 8.63/10 y 14 asignaturas con Matrícula de Honor.
+            {t.home.bio1}
           </p>
           <p className="home__bio">
-            Me interesa especialmente el
-            aprendizaje profundo aplicado a visión artificial — arquitecturas como los Vision
-            Transformers y cómo hacerlas más modulares y accesibles de experimentar.
+            {t.home.bio2}
           </p>
           <p className='home__bio'>
-            También disfruto escribiendo código dentro del desarrollo de software.
+            {t.home.bio3}
           </p>
           <div className="home__actions">
             <Link to="/proyectos" className="btn btn--primary">
-              Ver proyectos
+              {t.home.viewProjects}
             </Link>
             <a href="/cv-juan-gonzalez.pdf" download className="btn btn--ghost">
-              Descargar CV
+              {t.home.downloadCv}
             </a>
             <div className="home__socials">
               <a
@@ -77,15 +80,15 @@ export default function Home() {
       <section className="home__facts">
         <div className="home__fact">
           <span className="home__fact-value">8.63</span>
-          <span className="home__fact-label">Nota media / 10</span>
+          <span className="home__fact-label">{t.home.facts.average}</span>
         </div>
         <div className="home__fact">
           <span className="home__fact-value">14</span>
-          <span className="home__fact-label">Matrículas de Honor</span>
+          <span className="home__fact-label">{t.home.facts.honors}</span>
         </div>
         <div className="home__fact">
           <span className="home__fact-value">B1 / A2</span>
-          <span className="home__fact-label">Inglés / Francés</span>
+          <span className="home__fact-label">{t.home.facts.languages}</span>
         </div>
       </section>
     </div>

@@ -1,12 +1,17 @@
 import { experience } from '../data/experience'
+import { useLanguage } from '../context/LanguageContext'
+import { strings } from '../i18n/strings'
 import './Experience.css'
 
 export default function Experience() {
+  const { lang } = useLanguage()
+  const t = strings[lang]
+
   return (
     <div>
       <div className="page-header">
         <p className="page-eyebrow">// career.log</p>
-        <h1 className="page-title">Trayectoria profesional</h1>
+        <h1 className="page-title">{t.experience.title}</h1>
       </div>
 
       <ol className="timeline">
@@ -15,13 +20,13 @@ export default function Experience() {
             <div className="timeline__marker" />
             <div className="timeline__content">
               <span className="timeline__date">
-                {entry.startDate} — {entry.endDate}
+                {entry.startDate[lang]} — {entry.endDate[lang]}
               </span>
-              <h2 className="timeline__company">{entry.company}</h2>
-              <p className="timeline__role">{entry.role}</p>
+              <h2 className="timeline__company">{entry.company[lang]}</h2>
+              <p className="timeline__role">{entry.role[lang]}</p>
               <ul className="timeline__description">
                 {entry.description.map((line, i) => (
-                  <li key={i}>{line}</li>
+                  <li key={i}>{line[lang]}</li>
                 ))}
               </ul>
             </div>
