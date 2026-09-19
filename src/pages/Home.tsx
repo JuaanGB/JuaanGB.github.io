@@ -33,7 +33,7 @@ export default function Home() {
             <Link to="/proyectos" className="btn btn--primary">
               {t.home.viewProjects}
             </Link>
-            <a href="/cv-juan-gonzalez.pdf" download className="btn btn--ghost">
+            <a href={`/cv-juan-gonzalez-${lang}.pdf`} download className="btn btn--ghost">
               {t.home.downloadCv}
             </a>
             <div className="home__socials">
