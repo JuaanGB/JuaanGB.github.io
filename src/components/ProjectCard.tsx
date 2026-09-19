@@ -47,8 +47,8 @@ export default function ProjectCard({ project }: Props) {
 
         <div className="project-card__badges">
           {project.technologies.map((tech) => (
-            <span key={tech} className="badge">
-              {tech}
+            <span key={tech.es} className="badge">
+              {tech[lang]}
             </span>
           ))}
         </div>

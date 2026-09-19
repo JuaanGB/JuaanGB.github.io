@@ -3,7 +3,7 @@ export interface Project {
   title: { es: string; en: string }
   year: number
   images: string[]
-  technologies: string[]
+  technologies: { es: string; en: string }[]
   whatItIs: { es: string; en: string }
   challenges: { es: string; en: string }[]
   metrics: { es: string; en: string }[]
