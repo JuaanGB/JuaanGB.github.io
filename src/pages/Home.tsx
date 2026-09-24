@@ -87,7 +87,7 @@ export default function Home() {
           <span className="home__fact-label">{t.home.facts.honors}</span>
         </div>
         <div className="home__fact">
-          <span className="home__fact-value">B2 / A2</span>
+          <span className="home__fact-value">B1 (2019) / A2</span>
           <span className="home__fact-label">{t.home.facts.languages}</span>
         </div>
       </section>
