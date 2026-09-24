@@ -159,7 +159,7 @@ export const projects: Project[] = [
     id: 'smartway',
     title: { es: 'SmartWay Proyectos', en: 'SmartWay Projects' },
     year: 2025,
-    images: ['/images/smartway-1.webp'],
+    images: ['/images/smartway-1.webp', '/images/smartway-2.webp'],
     technologies: [
       { es: 'Vue.js', en: 'Vue.js' },
       { es: 'HTML', en: 'HTML' },
