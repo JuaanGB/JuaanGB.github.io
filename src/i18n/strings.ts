@@ -21,7 +21,9 @@ export const strings = {
       whatItIs: 'Qué es', 
       challenges: 'Retos encontrados y abordados', 
       metrics: 'Métricas de buen rendimiento',
-      viewCode: 'Ver código' 
+      viewCode: 'Ver código',
+      prevPage: 'Página anterior',
+      nextPage: 'Página siguiente',
     },
     experience: {
       title: 'Trayectoria profesional'
@@ -60,7 +62,9 @@ export const strings = {
       whatItIs: 'What it is', 
       challenges: 'Challenges faced and addressed', 
       metrics: 'Performance metrics',
-      viewCode: 'View code'
+      viewCode: 'View code',
+      prevPage: 'Previous page',
+      nextPage: 'Next page',
     },
     experience: {
       title: 'Professional experience'
