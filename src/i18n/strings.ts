@@ -25,6 +25,7 @@ export const strings = {
       prevPage: 'Página anterior',
       nextPage: 'Página siguiente',
       noResults: 'No hay proyectos con esas etiquetas.',
+      newLabel: 'NUEVO',
     },
     experience: {
       title: 'Trayectoria profesional'
@@ -67,6 +68,7 @@ export const strings = {
       prevPage: 'Previous page',
       nextPage: 'Next page',
       noResults: 'No projects match those tags.',
+      newLabel: 'NEW',
     },
     experience: {
       title: 'Professional experience'

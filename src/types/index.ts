@@ -1,7 +1,7 @@
 export interface Project {
   id: string
   title: { es: string; en: string }
-  year: number
+  year: string // fecha de finalización en formato ISO, ej. '2026-09-15'
   images: string[]
   technologies: { es: string; en: string }[]
   whatItIs: { es: string; en: string }

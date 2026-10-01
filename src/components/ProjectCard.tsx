@@ -8,18 +8,28 @@ interface Props {
   project: Project
 }
 
+const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000
+
 export default function ProjectCard({ project }: Props) {
   const [activeImage, setActiveImage] = useState(0)
   const [loaded, setLoaded] = useState<Record<number, boolean>>({})
   const { lang } = useLanguage()
   const t = strings[lang]
 
+  const completionDate = new Date(project.year)
+  const displayYear = completionDate.getFullYear()
+  const isNew = Date.now() - completionDate.getTime() < THIRTY_DAYS_MS
+
   return (
     <article className={'project-card' + (project.featured ? ' project-card--featured' : '')}>
+      {isNew && (
+        <span className="project-card__new-badge">{t.projects.newLabel}</span>
+      )}
+
       <div className="project-card__media">
         <img
           src={project.images[activeImage]}
-          alt={`Captura de ${project.title}`}
+          alt={`Captura de ${project.title[lang]}`}
           loading="lazy"
           decoding="async"
           className={'project-card__img' + (loaded[activeImage] ? ' project-card__img--loaded' : '')}
@@ -31,7 +41,7 @@ export default function ProjectCard({ project }: Props) {
               <button
                 key={i}
                 className={'project-card__dot' + (i === activeImage ? ' project-card__dot--active' : '')}
-                aria-label={`Ver imagen ${i + 1} de ${project.title}`}
+                aria-label={`Ver imagen ${i + 1} de ${project.title[lang]}`}
                 onClick={() => setActiveImage(i)}
               />
             ))}
@@ -42,7 +52,7 @@ export default function ProjectCard({ project }: Props) {
       <div className="project-card__body">
         <div className="project-card__heading">
           <h3 className="project-card__title">{project.title[lang]}</h3>
-          <span className="project-card__year">{project.year}</span>
+          <span className="project-card__year">{displayYear}</span>
         </div>
 
         <div className="project-card__badges">
@@ -80,13 +90,11 @@ export default function ProjectCard({ project }: Props) {
           </div>
         </dl>
 
-        {(project.repo) && (
+        {project.repo && (
           <div className="project-card__links">
-            {project.repo && (
-              <a href={project.repo} target="_blank" rel="noreferrer" className="project-card__link">
-                {t.projects.viewCode}
-              </a>
-            )}
+            <a href={project.repo} target="_blank" rel="noreferrer" className="project-card__link">
+              {t.projects.viewCode}
+            </a>
           </div>
         )}
       </div>

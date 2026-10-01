@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     id: 'modular-vit',
     title: { es: 'Modular-ViT', en: 'Modular-ViT' },
-    year: 2026,
+    year: "2026-06-30",
     images: ['/images/modular-vit.webp', '/images/modular-vit-2.webp'],
     technologies: [
       { es: 'Python', en: 'Python' },
@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     id: 'ia-para-videjuegos',
     title: { es: 'Videojuego de Guerra con Bandos', en: 'Faction War Game' },
-    year: 2026,
+    year: "2026-05-30",
     images: ['/images/iadj-1.webp', '/images/iadj-2.webp'],
     technologies: [
       { es: 'Unity', en: 'Unity' },
@@ -60,7 +60,7 @@ export const projects: Project[] = [
   {
     id: 'vision-artificial',
     title: { es: 'Visión Artificial', en: 'Computer Vision' },
-    year: 2026,
+    year: "2026-05-30",
     images: ['/images/vision-artificial-1.webp', '/images/vision-artificial-2.webp', '/images/vision-artificial-3.webp'],
     technologies: [
       { es: 'Python', en: 'Python' },
@@ -87,7 +87,7 @@ export const projects: Project[] = [
   {
     id: 'aprendizaje-computacional',
     title: { es: 'Predicción de Aprobación de Crédito', en: 'Credit Approval Prediction' },
-    year: 2025,
+    year: "2026-01-15",
     images: ['/images/aprendizaje-computacional.webp'],
     technologies: [
       { es: 'RStudio', en: 'RStudio' },
@@ -112,7 +112,7 @@ export const projects: Project[] = [
   {
     id: 'futbolistos',
     title: { es: 'Futbolistos', en: 'Futbolistos' },
-    year: 2025,
+    year: "2025-05-14",
     images: ['/images/futbolistos.webp'],
     technologies: [
       { es: 'Java', en: 'Java' },
@@ -138,7 +138,7 @@ export const projects: Project[] = [
   {
     id: 'appchat',
     title: { es: 'AppChat', en: 'AppChat' },
-    year: 2024,
+    year: "2024-01-19",
     images: ['/images/appchat.webp'],
     technologies: [
       { es: 'Java', en: 'Java' },
@@ -164,7 +164,7 @@ export const projects: Project[] = [
   {
     id: 'smartway',
     title: { es: 'SmartWay Proyectos', en: 'SmartWay Projects' },
-    year: 2025,
+    year: "2025-07-15",
     images: ['/images/smartway-1.webp', '/images/smartway-2.webp'],
     technologies: [
       { es: 'Vue.js', en: 'Vue.js' },
@@ -194,7 +194,7 @@ export const projects: Project[] = [
   {
     id: 'horarigo',
     title: { es: 'HorariGo', en: 'HorariGo' },
-    year: 2025,
+    year: "2025-08-30",
     images: ['/images/horarigo.webp'],
     technologies: [
       { es: 'Vue.js', en: 'Vue.js' },
@@ -220,7 +220,7 @@ export const projects: Project[] = [
   {
     id: 'ecopath',
     title: { es: 'EcoPath', en: 'EcoPath' },
-    year: 2026,
+    year: "2026-05-01",
     images: ['/images/ecopath-1.webp', '/images/ecopath-2.webp', '/images/ecopath-3.webp', '/images/ecopath-4.webp', '/images/ecopath-5.webp'],
     technologies: [
       { es: 'Figma', en: 'Figma' },
