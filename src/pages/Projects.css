@@ -53,3 +53,9 @@
   min-width: 48px;
   text-align: center;
 }
+
+.projects-empty {
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 48px 0;
+}

@@ -24,6 +24,7 @@ export const strings = {
       viewCode: 'Ver código',
       prevPage: 'Página anterior',
       nextPage: 'Página siguiente',
+      noResults: 'No hay proyectos con esas etiquetas.',
     },
     experience: {
       title: 'Trayectoria profesional'
@@ -65,6 +66,7 @@ export const strings = {
       viewCode: 'View code',
       prevPage: 'Previous page',
       nextPage: 'Next page',
+      noResults: 'No projects match those tags.',
     },
     experience: {
       title: 'Professional experience'

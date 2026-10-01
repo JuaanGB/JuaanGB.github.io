@@ -7,6 +7,7 @@ export interface Project {
   whatItIs: { es: string; en: string }
   challenges: { es: string; en: string }[]
   metrics: { es: string; en: string }[]
+  tags: string[]
   repo?: string
   featured?: boolean
 }

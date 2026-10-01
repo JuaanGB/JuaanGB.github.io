@@ -26,6 +26,7 @@ export const projects: Project[] = [
       { es: 'Mejora de aproximadamente 10 puntos porcentuales respecto al modelo base evaluado.', en: 'Roughly a 10 percentage-point improvement over the evaluated baseline model.' },
       { es: 'Explorar un nuevo mecanismo conlleva la creación de una clase y un fichero de configuración nuevos.', en: 'Exploring a new mechanism only requires creating a new class and a new configuration file.' },
     ],
+    tags: ['ai-ml'],
     repo: 'https://github.com/JuaanGB/Modular-ViT',
     featured: false,
   },
@@ -54,6 +55,7 @@ export const projects: Project[] = [
       { es: 'Más de 10 NPCs ejecutando simultáneamente el algoritmo A* sobre un grafo de 3000 nodos.', en: 'More than 10 NPCs running the A* algorithm simultaneously over a 3,000-node graph.' },
       { es: 'Matrícula de Honor en la asignatura de IA para el Desarrollo de Videojuegos.', en: 'Highest honors (Matrícula de Honor) in the AI for Game Development course.' },
     ],
+    tags: ['ai-ml', 'game-dev'],
   },
   {
     id: 'vision-artificial',
@@ -80,6 +82,7 @@ export const projects: Project[] = [
     metrics: [
       { es: 'Correcto funcionamiento y reconocimiento de los programas realizados.', en: 'Correct operation and recognition across all the programs built.' },
     ],
+    tags: ['ai-ml'],
   },
   {
     id: 'aprendizaje-computacional',
@@ -104,6 +107,7 @@ export const projects: Project[] = [
     metrics: [
       { es: 'Modelo final con una tasa de acierto del 90.38% empleando Random Forest.', en: 'Final model achieving a 90.38% accuracy rate using Random Forest.' },
     ],
+    tags: ['ai-ml', 'data'],
   },
   {
     id: 'futbolistos',
@@ -129,6 +133,7 @@ export const projects: Project[] = [
     metrics: [
       { es: 'Matrícula de Honor en la asignatura Proyectos de Desarrollo de Software.', en: 'Highest honors (Matrícula de Honor) in the Software Development Projects course.' },
     ],
+    tags: ['software'],
   },
   {
     id: 'appchat',
@@ -154,6 +159,7 @@ export const projects: Project[] = [
     metrics: [
       { es: 'Matrícula de Honor en la asignatura Tecnologías de Desarrollo de Software.', en: 'Highest honors (Matrícula de Honor) in the Software Development Technologies course.' },
     ],
+    tags: ['software'],
   },
   {
     id: 'smartway',
@@ -183,6 +189,7 @@ export const projects: Project[] = [
     metrics: [
       { es: 'Adopción efectiva del stack tecnológico, incluyendo la dockerización del entorno y la implementación de autenticación mediante JWT como prácticas adicionales.', en: 'Successful adoption of the tech stack, including dockerizing the environment and implementing JWT authentication as additional practice.' },
     ],
+    tags: ['web'],
   },
   {
     id: 'horarigo',
@@ -208,6 +215,7 @@ export const projects: Project[] = [
     metrics: [
       { es: 'Empleada para la planificación de mi último curso de carrera, cursado con 72 créditos, y acabando la carrera en 4 años.', en: 'Used to plan my final year of the degree, in which I took 72 credits and finished the degree in 4 years.' },
     ],
+    tags: ['web'],
   },
   {
     id: 'ecopath',
@@ -233,5 +241,6 @@ export const projects: Project[] = [
     metrics: [
       { es: 'Proyecto correcto según los mentores de Capgemini.', en: 'Project validated as correct by the Capgemini mentors.' },
     ],
+    tags: ['design'],
   },
 ]
