@@ -14,6 +14,11 @@ export default function Projects() {
   const [page, setPage] = useState(1)
   const [selectedTags, setSelectedTags] = useState<string[]>([])
 
+  const sortedProjects = useMemo(
+    () => [...projects].sort((a, b) => new Date(b.year).getTime() - new Date(a.year).getTime()),
+    []
+  )
+
   const toggleTag = (tagId: string) => {
     setSelectedTags((prev) =>
       prev.includes(tagId) ? prev.filter((id) => id !== tagId) : [...prev, tagId]
@@ -22,11 +27,11 @@ export default function Projects() {
   }
 
   const filteredProjects = useMemo(() => {
-    if (selectedTags.length === 0) return projects
-    return projects.filter((project) =>
+    if (selectedTags.length === 0) return sortedProjects
+    return sortedProjects.filter((project) =>
       selectedTags.some((tagId) => project.tags.includes(tagId))
     )
-  }, [selectedTags])
+  }, [sortedProjects, selectedTags])
 
   const totalPages = Math.max(1, Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE))
 
