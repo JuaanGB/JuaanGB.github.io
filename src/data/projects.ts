@@ -2,6 +2,33 @@ import type { Project } from '../types'
 
 export const projects: Project[] = [
   {
+    id: 'web-content-triage',
+    title: { es: 'Filtrado Inteligente de Contenido Web', en: 'Web Content Triage' },
+    year: "2026-10-08",
+    images: ['/images/web-content-triage.webp'],
+    technologies: [
+      { es: 'Python', en: 'Python' },
+      { es: 'LLMs', en: 'LLMs' },
+      { es: 'OpenRouter', en: 'OpenRouter' },
+      { es: 'Web Scraping', en: 'Web Scraping' },
+      { es: 'Caché', en: 'Caching' },
+    ],
+    whatItIs: { 
+      es: 'Sistema de clasificación de enlaces en un portal de posts, como Hacker News, para identificar qué publicaciones merece la pena analizar detenidamente según su relevancia para una actividad empresarial.', 
+      en: 'Link classification system for a post portal such as Hacker News, designed to identify which posts are worth analyzing in depth based on their relevance to a business activity.', 
+    },
+    challenges: [ 
+      { es: 'Falsos positivos en la detección mediante palabras clave → Umbral configurable y análisis mediante un LLM para entender el contexto del texto.', en: 'False positives in keyword-based detection → Configurable threshold and LLM analysis to understand the context of the text.', }, 
+      { es: 'Repetición de detección del LLM para un post ya escaneado → Implementación de una caché para evitar llamadas al LLM y ahorrar tokens.', en: 'Repeated LLM analysis of an already scanned post → A cache was implemented to avoid repeated LLM calls and save tokens.', }, 
+    ],
+    metrics: [
+      {es: 'Similitud entre la clasificación basada en el contenido de los posts y la realizada por el LLM.', en: 'Similarity between the classification based on post content and the one performed by the LLM.'},
+    ],
+    tags: ['ai-ml', 'software'],
+    featured: false,
+    repo: "https://github.com/JuaanGB/WebContentTriage"
+  },
+  {
     id: 'modular-vit',
     title: { es: 'Modular-ViT', en: 'Modular-ViT' },
     year: "2026-06-30",
