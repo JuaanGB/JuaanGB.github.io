@@ -14,8 +14,8 @@ export const projects: Project[] = [
       { es: 'Caché', en: 'Caching' },
     ],
     whatItIs: { 
-      es: 'Sistema de clasificación de enlaces en un portal de posts, como Hacker News, para identificar qué publicaciones merece la pena analizar detenidamente según su relevancia para una actividad empresarial.', 
-      en: 'Link classification system for a post portal such as Hacker News, designed to identify which posts are worth analyzing in depth based on their relevance to a business activity.', 
+      es: 'Sistema de clasificación de enlaces en un portal de posts, como Hacker News, para identificar qué publicaciones merece la pena analizar detenidamente según su relevancia para una tema específico.', 
+      en: 'Link classification system for a post portal such as Hacker News, designed to identify which posts are worth analyzing in depth based on their relevance to some topic.', 
     },
     challenges: [ 
       { es: 'Falsos positivos en la detección mediante palabras clave → Umbral configurable y análisis mediante un LLM para entender el contexto del texto.', en: 'False positives in keyword-based detection → Configurable threshold and LLM analysis to understand the context of the text.', }, 
